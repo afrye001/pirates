@@ -73,7 +73,7 @@ class Player (Context):
             announce ("Saving is only possible abord ship.")
         else:
             announce ("saving...", end="",pause=False)
-            f = open ("save.json", "w")
+            f = open ("save.json", "x")
             f.write (jsonpickle.encode (self))
             f.close()
             announce ("..done")
@@ -82,7 +82,7 @@ class Player (Context):
             if "jsonpickle" not in sys.modules:
                 announce ("jsonpickle hasn't be imported. Loading is impossible.")
             elif self.location != self.ship:
-                announce ("Loading is only possible abord ship.")
+                announce ("Loading is only possible aboard ship.")
             else:
                 with open ("save.json") as f:
                     s = f.read()
