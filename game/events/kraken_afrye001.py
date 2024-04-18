@@ -13,7 +13,6 @@ import random
 #         raise NotImplemented("Kraken functionality unimplemented")
 
 
-
 class Kraken (Context, event.Event):
     '''Event with the kraken that attacks pirates. Uses parsing to deal with it.'''
 
